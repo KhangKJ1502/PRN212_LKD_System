@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LorKingDom Management System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+459a9fbce8a81f95631f0cd11f3880c0462b3ff9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6297573c91dd3c7bb9ec80a396381560aa839b7f")]
 [assembly: System.Reflection.AssemblyProductAttribute("LorKingDom Management System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LorKingDom Management System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
