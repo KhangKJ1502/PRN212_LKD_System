@@ -1,5 +1,5 @@
 ﻿LorKingDom Management System
-
+1.0.0.0
 
 winexe
 C#
@@ -12,7 +12,7 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\admin\source\repos\LorKingDom Management System\LorKingDom Management System\App.xaml
 2245105205
 
-16-1991768477
+181714283723
 240-1548547001
 MainWindow.xaml;Views\Admin\ProductView.xaml;
 

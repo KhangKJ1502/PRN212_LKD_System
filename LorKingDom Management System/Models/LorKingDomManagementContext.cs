@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace LorKingDom_Management_System.Models;
 
@@ -31,9 +33,25 @@ public partial class LorKingDomManagementContext : DbContext
 
     public virtual DbSet<ShippingMethod> ShippingMethods { get; set; }
 
+    private string GetConnectionString()
+    {
+        IConfiguration config = new ConfigurationBuilder()
+             .SetBasePath(Directory.GetCurrentDirectory())
+                    .AddJsonFile("appsettings.json", true, true)
+                    .Build();
+        var strConn = config["ConnectionStrings:DefaultConnectionStringDB"];
+        //                          DẤU CÁCH VÀ 9 TRIỆU (6T + 3T
+        //MessageBox.Show($"🔍 Chuỗi kết nối đọc được: {strConn}1"); // Debug
+        // if (string.IsNullOrEmpty(strConn)) {
+        //     throw new Exception("⚠ Lỗi: Không tìm thấy chuỗi kết nối trong appsettings.json!");
+        // }
+        return strConn;
+    }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=MSI\\VANKHANG;Initial Catalog=LorKingDomManagement;Persist Security Info=True;User ID=sa;Password=khangmc1502@;Trust Server Certificate=True ");
+    {
+        optionsBuilder.UseSqlServer(GetConnectionString());
+    }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
