@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\admin\source\repos\LorKingDom Management System\LorKingDom Management System\App.xaml
-2245105205
+3-2043345718
 
-191826529631
+22-1371506432
 241260062035
-MainWindow.xaml;Views\Admin\ProductView.xaml;
+MainWindow.xaml;Register.xaml;Views\Admin\ProductView.xaml;
 
-False
+True
 
