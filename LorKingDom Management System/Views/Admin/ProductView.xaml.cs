@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,21 @@ namespace LorKingDom_Management_System.Views.Admin
         public ProductView()
         {
             InitializeComponent();
+
+        }
+
+        private void BtnSelectImage_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Image files (*.png;*.jpg;*.jpeg;*.bmp)|*.png;*.jpg;*.jpeg;*.bmp",
+                Title = "Chọn một ảnh"
+            };
+
+            if (openFileDialog.ShowDialog() == true) {
+                // Hiển thị ảnh đã chọn trong Image control
+                imgPreview.Source = new BitmapImage(new Uri(openFileDialog.FileName));
+            }
         }
     }
 }
