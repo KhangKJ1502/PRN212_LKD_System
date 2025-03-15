@@ -160,3 +160,4 @@ C:\Users\admin\source\repos\LorKingDom Management System\LorKingDom Management S
 C:\Users\admin\source\repos\LorKingDom Management System\LorKingDom Management System\obj\Debug\net8.0-windows\LorKingDom Management System.pdb
 C:\Users\admin\source\repos\LorKingDom Management System\LorKingDom Management System\obj\Debug\net8.0-windows\LorKingDom Management System.genruntimeconfig.cache
 C:\Users\admin\source\repos\LorKingDom Management System\LorKingDom Management System\obj\Debug\net8.0-windows\ref\LorKingDom Management System.dll
+C:\Users\admin\source\repos\LorKingDom Management System\LorKingDom Management System\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
