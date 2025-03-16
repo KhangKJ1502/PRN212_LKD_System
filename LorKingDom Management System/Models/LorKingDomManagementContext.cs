@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -42,9 +43,9 @@ public partial class LorKingDomManagementContext : DbContext
         var strConn = config["ConnectionStrings:DefaultConnectionStringDB"];
         //                          DẤU CÁCH VÀ 9 TRIỆU (6T + 3T
         //MessageBox.Show($"🔍 Chuỗi kết nối đọc được: {strConn}1"); // Debug
-        // if (string.IsNullOrEmpty(strConn)) {
-        //     throw new Exception("⚠ Lỗi: Không tìm thấy chuỗi kết nối trong appsettings.json!");
-        // }
+        //if (string.IsNullOrEmpty(strConn)) {
+        //    throw new Exception("⚠ Lỗi: Không tìm thấy chuỗi kết nối trong appsettings.json!");
+        //}
         return strConn;
     }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
