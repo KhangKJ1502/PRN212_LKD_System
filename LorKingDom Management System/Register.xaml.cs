@@ -11,7 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using LorKingDom_Management_System.Models;
+using LorKingDom_Management_System.ViewModels;
+using LorKingDom_Management_System.ViewModels;
 namespace LorKingDom_Management_System
 {
     public partial class Register : Window
@@ -19,6 +21,8 @@ namespace LorKingDom_Management_System
         public Register()
         {
             InitializeComponent();
+            this.DataContext = new SignUpViewModels();
+            CheckDatabaseConnection();
         }
 
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
@@ -70,21 +74,19 @@ namespace LorKingDom_Management_System
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtName.Text) &&
-                !string.IsNullOrEmpty(txtPhone.Text) &&
-                !string.IsNullOrEmpty(txtEmail.Text) &&
-                !string.IsNullOrEmpty(txtPassword.Password))
+            var viewModel = DataContext as SignUpViewModels;
+            if (viewModel != null)
             {
-                MessageBox.Show($"Name: {txtName.Text}\n" +
-                                $"Phone: {txtPhone.Text}\n" +
-                                $"Email: {txtEmail.Text}\n" +
-                                $"Password: {txtPassword.Password}");
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
+                viewModel.TextBoxItem.AccountName = txtName.Text;
+                viewModel.TextBoxItem.PhoneNumber = txtPhone.Text;
+                viewModel.TextBoxItem.Email = txtEmail.Text;
+                viewModel.TextBoxItem.Password = txtPassword.Password;
+
+                if (viewModel.RegisterCommand.CanExecute(null))
+                    viewModel.RegisterCommand.Execute(null);
             }
         }
+
 
         private void SignInButton_Click(object sender, RoutedEventArgs e)
         {
@@ -92,6 +94,29 @@ namespace LorKingDom_Management_System
 
             // Hiển thị cửa sổ đó
             registerWin.Show();
+            this.Close();
+
+        }
+        private void CheckDatabaseConnection()
+        {
+            try
+            {
+                using (var context = new LorKingDomManagementContext())
+                {
+                    if (context.Database.CanConnect())
+                    {
+                        MessageBox.Show("Kết nối cơ sở dữ liệu thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể kết nối đến cơ sở dữ liệu!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Có lỗi xảy ra: {ex.Message}");
+            }
         }
     } // Đóng class Register
 } // Đóng namespace LorKingDom_Management_System

@@ -82,6 +82,8 @@ namespace LorKingDom_Management_System
 
             // Hiển thị cửa sổ đó
             registerWin.Show();
+            this.Close();
+
 
         }
     }

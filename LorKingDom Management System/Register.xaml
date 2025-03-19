@@ -88,12 +88,9 @@
                             <!--Icon minh hoạ-->
                             <Image Source="images/user.png" Height="20" Opacity=".5"/>
                             <!--Hint Text-->
-                            <TextBlock x:Name="textName" 
-                                     
-                                       MouseDown="TextName_MouseDown" 
-                                       Style="{StaticResource textHint}"/>
-                            <!--Textbox nhập tên-->
-                            <TextBox x:Name="txtName" Style="{StaticResource textbox}"/>
+                            <TextBox x:Name="txtName" 
+                                     Style="{StaticResource textbox}" 
+                                     Text="{Binding TextBoxItem.AccountName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                         </Grid>
                     </Border>
 
@@ -105,11 +102,9 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Image Source="\images\phone.png" Height="20" Opacity=".5"/>
-                            <TextBlock x:Name="textPhone" 
-                                      
-                                       MouseDown="TextPhone_MouseDown" 
-                                       Style="{StaticResource textHint}"/>
-                            <TextBox x:Name="txtPhone" Style="{StaticResource textbox}"/>
+                            <TextBox x:Name="txtPhone" 
+                                     Style="{StaticResource textbox}" 
+                                     Text="{Binding TextBoxItem.PhoneNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>           
                         </Grid>
                     </Border>
 
@@ -121,11 +116,10 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Image Source="images/email.png" Height="20" Opacity=".5"/>
-                            <TextBlock x:Name="textEmail" 
-                                   
-                                       MouseDown="TextEmail_MouseDown" 
-                                       Style="{StaticResource textHint}"/>
-                            <TextBox x:Name="txtEmail" Style="{StaticResource textbox}"/>
+                            <TextBox x:Name="txtEmail" 
+                                     Style="{StaticResource textbox}" 
+                                     Text="{Binding TextBoxItem.Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>     
+
                         </Grid>
                     </Border>
 
@@ -142,8 +136,8 @@
                                        MouseDown="TextPassword_MouseDown" 
                                        Style="{StaticResource textHint}"/>
                             <PasswordBox x:Name="txtPassword" 
-                                        PasswordChanged="TxtPassword_PasswordChanged" 
-                                        Style="{StaticResource textbox}"/>
+                                         Style="{StaticResource textbox}" 
+                                         PasswordChanged="TxtPassword_PasswordChanged"/>
                         </Grid>
                     </Border>
 
