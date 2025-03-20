@@ -163,6 +163,7 @@ C:\Users\admin\source\repos\LorKingDom Management System\LorKingDom Management S
 C:\Users\admin\source\repos\LorKingDom Management System\LorKingDom Management System\obj\Debug\net8.0-windows\LorKingDom Management System.pdb
 C:\Users\admin\source\repos\LorKingDom Management System\LorKingDom Management System\obj\Debug\net8.0-windows\LorKingDom Management System.genruntimeconfig.cache
 C:\Users\admin\source\repos\LorKingDom Management System\LorKingDom Management System\obj\Debug\net8.0-windows\ref\LorKingDom Management System.dll
+<<<<<<< HEAD
 F:\SPRING_2025\PRN212\Test\Main\LorKingDom Management System\bin\Debug\net8.0-windows\LorKingDom Management System.exe
 F:\SPRING_2025\PRN212\Test\Main\LorKingDom Management System\bin\Debug\net8.0-windows\LorKingDom Management System.deps.json
 F:\SPRING_2025\PRN212\Test\Main\LorKingDom Management System\bin\Debug\net8.0-windows\LorKingDom Management System.runtimeconfig.json
@@ -330,3 +331,10 @@ F:\SPRING_2025\PRN212\Test\Main\LorKingDom Management System\obj\Debug\net8.0-wi
 F:\SPRING_2025\PRN212\Test\Main\LorKingDom Management System\obj\Debug\net8.0-windows\ref\LorKingDom Management System.dll
 F:\SPRING_2025\PRN212\Test\Main\LorKingDom Management System\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll
 F:\SPRING_2025\PRN212\Test\Main\LorKingDom Management System\bin\Debug\net8.0-windows\appsettings.json
+=======
+C:\Users\admin\source\repos\LorKingDom Management System\LorKingDom Management System\bin\Debug\net8.0-windows\appsettings.json
+C:\Users\admin\source\repos\LorKingDom Management System\LorKingDom Management System\obj\Debug\net8.0-windows\Views\Admin\MainAdmin.g.cs
+C:\Users\admin\source\repos\LorKingDom Management System\LorKingDom Management System\obj\Debug\net8.0-windows\Views\Admin\MainAdmin.baml
+>>>>>>> cc7bd3be14517c365b223280dc140f095b20346f
+F:\SPRING_2025\PRN212\Test\Main\LorKingDom Management System\obj\Debug\net8.0-windows\Views\Admin\MainAdmin.g.cs
+F:\SPRING_2025\PRN212\Test\Main\LorKingDom Management System\obj\Debug\net8.0-windows\Views\Admin\MainAdmin.baml

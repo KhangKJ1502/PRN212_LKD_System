@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LorKingDom_Management_System.ViewModels;
 
 namespace LorKingDom_Management_System.Views.Admin
 {
@@ -24,6 +25,7 @@ namespace LorKingDom_Management_System.Views.Admin
         public ProductView()
         {
             InitializeComponent();
+            this.DataContext = new ProductViewModels();
 
         }
 
@@ -38,6 +40,10 @@ namespace LorKingDom_Management_System.Views.Admin
             if (openFileDialog.ShowDialog() == true) {
                 // Hiển thị ảnh đã chọn trong Image control
                 imgPreview.Source = new BitmapImage(new Uri(openFileDialog.FileName));
+            }
+            // Gán đường dẫn ảnh vào TextBoxItem.Image
+            if (DataContext is ProductViewModels viewModel && viewModel.TextBoxItem != null) {
+                viewModel.TextBoxItem.Image = openFileDialog.FileName;
             }
         }
     }

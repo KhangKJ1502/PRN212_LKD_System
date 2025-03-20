@@ -31,7 +31,11 @@
   
   <ItemGroup>
     <None Update="appsettings.json">
+
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+
     </None>
   </ItemGroup>
 
